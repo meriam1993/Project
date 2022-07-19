@@ -79,13 +79,14 @@ and open the template in the editor.
 }
 .table-view .column-header .label{
    -fx-text-fill:  #3BB925;
-   -fx-alignment: CENTER_LEFT;
+   -fx-alignment: CENTER;
   
         
 }
 .table-view .column-header{
    
-    -fx-size: 65;
+   -fx-size: 65;
+
     -fx-border-color: #F4F4F4;
     -fx-border-width: 0 0 2 0;
     -fx-background-color:  #F4F4F4;
@@ -93,7 +94,7 @@ and open the template in the editor.
 }
 .date-picker .arrow-button {
 	-fx-background-color: #3BB925;
-	
+	-fx-background-radius: 0;
 }
 .date-picker .arrow-button:hover {
 	-fx-background-color: #F4F4F4;
@@ -103,8 +104,6 @@ and open the template in the editor.
 }
 .date-picker .cell {
 	-fx-background-color: white;
-        -fx-background-radius: 100;
-
 }
 .date-picker .cell:hover {
 	-fx-background-color: #3BB925;
@@ -115,8 +114,6 @@ and open the template in the editor.
 .date-picker .selected {
 	-fx-background-color: #3BB925;
 	-fx-text-fill: white;
-        -fx-background-radius: 100;
-
 }
 .date-picker .selected:focused {
 	-fx-background-color: #3BB925;
@@ -124,44 +121,19 @@ and open the template in the editor.
 }
 .date-picker-popup  {
 	-fx-border-color: transparent;
-        -fx-background-radius: 100;
-
 }
 .date-picker-popup .month-year-pane {
 	-fx-background-color: #3BB925;
-        
-
 }
 .date-picker-popup .month-year-pane .label {
 	-fx-text-fill: white;
-        
-
 }
 .date-picker-popup .week-number-cell {
 	-fx-text-fill: #F4F4F4;
-       
-
 }
 .date-picker-popup .spinner .button .left-arrow,
 .date-picker-popup .spinner .button .right-arrow {
 	-fx-background-color: white;
-        
-}
-.date-picker .label{
-    
--fx-background-radius: 100;
--fx-border-radius: 100;
--fx-text-fill: #3bb925;
-
-}
-.date-picker{
-     -fx-background-radius: 50 50 50 50;
-}
-.date-picker > .text-field {
-    -fx-background-radius: 50 0 0 50;
-}
-.date-picker > .arrow-button {
-    -fx-background-radius: 0 50 50 0;
 }
 .button {
     -fx-background-color:none;
@@ -178,44 +150,3 @@ and open the template in the editor.
     -fx-content-display: LEFT;
 
 }
-
-
-
-.choice-box{
-    -fx-background-color:white;
-    -fx-background-radius: 50 50 50 50;
-        -fx-border-radius: 50 50 50 50;
-        -fx-border-color :#3BB925 ;
-
-}
-
-
-
-.choice-box .context-menu { 
-    -fx-background-color: white; 
-   
-}
-.choice-box .menu-item:focused { 
- -fx-background-color: #3BB925; }
-.choice-box .menu-item > .label { 
--fx-text-fill: black; 
--fx-background-radius: 50 50 50 50;
--fx-border-radius: 100;}
-.choice-box .menu-item:focused > .label { 
--fx-text-fill: black;
--fx-background-radius: 50 50 50 50;
-}
-
-.backGroundImg{
-    -fx-background-image: url('bcdImg.jpg');
-}
-.loginFields{
-     -fx-background-color: #ffffff;
- opacity: 0.4;
-
-}
-/*//.{
-    -fx-background-color:none;
-    -fx-border-color: #3BB925;
-    -fx-text-fill: #3BB925;
-}*/

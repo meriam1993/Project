@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package service;
-import Entity.Vol;
-import Entity.Vol_reservation;
+import entite.Vol;
+import entite.Vol_reservation;
 import java.util.ArrayList;
 import java.sql.*;
 import java.util.logging.Level;
@@ -171,6 +171,21 @@ public class VolService implements IService<Vol> {
         return Vols;
         
     }
+
+    @Override
+    public void delete(Vol t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void update(Vol t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ArrayList<Vol> getAllById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+ 
    
 
    

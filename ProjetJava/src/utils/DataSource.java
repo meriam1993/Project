@@ -37,7 +37,7 @@ public class DataSource {
         return instance;
     }
 
-    public  Connection getCon() {
+    public Connection getCon() {
         return con;
     }
     

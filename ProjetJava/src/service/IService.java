@@ -10,13 +10,16 @@ import java.util.ArrayList;
 /**
  *
  * @author wiemhjiri
+ * @param <T>
  */
 public interface IService<T> {
     
     void insert(T t);
+    void delete(T t);
     void delete(T t,int id);
+    void update(T t);
     void update(T t,int id);
     ArrayList<T> getAll();
-    T getById(int id);
+    T getById(int car_id);
     
 }

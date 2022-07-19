@@ -1,0 +1,8 @@
+.backGroundImg{
+    -fx-background-image: url('../img/bcdImg.jpg');
+}
+.loginFields{
+     -fx-background-color: #ffffff;
+ opacity: 0.4;
+
+}

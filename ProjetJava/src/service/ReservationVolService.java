@@ -5,9 +5,9 @@
  */
 package service;
 
-import Entity.Vol_reservation;
-import Entity.user;
-import Entity.Vol;
+import entite.Vol_reservation;
+import entite.user;
+import entite.Vol;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -116,6 +116,7 @@ public class ReservationVolService implements IService<Vol_reservation> {
                 int VolId=rs.getInt(3);
                 VolService vo=new VolService();
             ResV.add(new Vol_reservation(rs.getInt(1),us.getById(userId),vo.getById(VolId),rs.getString(4),rs.getString(5),rs.getDate(6),rs.getFloat(7)));
+               
             
             }
 
@@ -146,6 +147,34 @@ public class ReservationVolService implements IService<Vol_reservation> {
         }
         return ResV;
     }
-    
+
+    @Override
+    public void delete(Vol_reservation t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void update(Vol_reservation t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+       public ArrayList<Vol_reservation> getAllById(int id) {
+
+        ArrayList<Vol_reservation> ResV=new ArrayList<>();
+        String req="select * from vol_reservation where user_id="+id;
+
+        try {
+            ste=cnx.createStatement();
+            rs=ste.executeQuery(req);
+            while(rs.next()){
+            
+            ResV.add(new Vol_reservation(rs.getInt(1),rs.getString(4),rs.getString(5),rs.getDate(6),rs.getFloat(7)));
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(VolService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return ResV;
+    }
     
 }
