@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #87CEEB; -fx-opacity: 0.8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ResetController">
+   <children>
+      <AnchorPane layoutX="58.0" layoutY="55.0" prefHeight="690.0" prefWidth="1165.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.82;">
+         <children>
+            <ImageView fitHeight="570.0" fitWidth="534.0" layoutX="34.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/NDA.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="newpass" focusColor="WHITE" layoutX="635.0" layoutY="265.0" prefHeight="48.0" prefWidth="348.0" promptText="  New password" style="-fx-background-color: #d4dfe0; -fx-border-color: #FFFFFF; -fx-background-radius: 8px;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="vpass" focusColor="WHITE" layoutX="635.0" layoutY="358.0" prefHeight="48.0" prefWidth="348.0" promptText="  Verify Password" style="-fx-background-color: #d4dfe0; -fx-border-color: #FFFFFF; -fx-border-radius: 8px;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Text layoutX="580.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: Bold; -fx-font-size: 30;" text="Reset your Password    " textAlignment="CENTER" wrappingWidth="429.95166015625" />
+            <Text fill="#757373" layoutX="583.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Enter new password" textAlignment="CENTER" wrappingWidth="281.62109375" />
+            <JFXButton fx:id="reset2" layoutX="865.0" layoutY="453.0" onAction="#resetPass" prefHeight="44.0" prefWidth="122.0" style="-fx-background-color: #3BB925; -fx-background-radius: 15px;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+    </AnchorPane>
