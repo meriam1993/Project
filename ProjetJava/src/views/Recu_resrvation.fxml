@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Recu_resrvationController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="810.0" prefWidth="1315.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="104.0" layoutX="781.0" layoutY="616.0" stroke="#3bb925" strokeType="INSIDE" width="128.0" />
+            <Label layoutX="658.0" layoutY="151.0" prefHeight="21.0" prefWidth="423.0" style="-fx-background-color: #3bb925;" styleClass="search-button" stylesheets="@../values/style.css" text="     DETAILS" textFill="#eeeaea">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="674.0" layoutY="208.0" prefHeight="21.0" prefWidth="85.0" text="DATE :" />
+            <Label layoutX="674.0" layoutY="229.0" prefHeight="21.0" prefWidth="85.0" text="INVOICE ID :" />
+            <Label layoutX="674.0" layoutY="293.0" prefHeight="21.0" prefWidth="96.0" text="KM :" />
+            <Label layoutX="674.0" layoutY="250.0" prefHeight="21.0" prefWidth="96.0" text="CAR BRAND :" />
+            <Label layoutX="674.0" layoutY="272.0" prefHeight="21.0" prefWidth="96.0" text="CAR MODEL :" />
+            <Label layoutX="42.0" layoutY="327.0" prefHeight="21.0" prefWidth="438.0" style="-fx-background-color: #3bb925;" styleClass="search-button" stylesheets="@../values/style.css" text="     FROM" textFill="#eeeaea">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="664.0" layoutY="327.0" prefHeight="21.0" prefWidth="423.0" style="-fx-background-color: #3bb925;" styleClass="search-button" stylesheets="@../values/style.css" text="     BILL TO" textFill="#eeeaea">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="374.0" prefHeight="21.0" prefWidth="423.0" text="COMPANY :      TUNIGREEN" />
+            <Label layoutX="57.0" layoutY="395.0" prefHeight="21.0" prefWidth="423.0" text="ADDRESS   :      TUNIS-TUNISIA" />
+            <Label layoutX="57.0" layoutY="416.0" prefHeight="21.0" prefWidth="423.0" text="PHONE  :           (+216) 22 200 113" />
+            <Label layoutX="57.0" layoutY="437.0" prefHeight="21.0" prefWidth="423.0" text="E-MAIL  :           TUNIGREEN@ESPRIT.TN" />
+            <Label layoutX="674.0" layoutY="374.0" prefHeight="21.0" prefWidth="103.0" text="FIRST NAME :" />
+            <Label layoutX="674.0" layoutY="395.0" prefHeight="21.0" prefWidth="103.0" text="LAST NAME :" />
+            <Label layoutX="674.0" layoutY="416.0" prefHeight="21.0" prefWidth="423.0" text="ADDRESS   :      TUNIS-TUNISIA" />
+            <Label layoutX="674.0" layoutY="437.0" prefHeight="21.0" prefWidth="423.0" text="PHONE  :           (+216) XX XXX XXX" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="197.0" layoutY="481.0" stroke="#3bb925" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="840.0" />
+            <Line endX="-6.0" endY="34.0" fill="#3bb925" layoutX="509.0" layoutY="580.0" startX="-6.0" startY="-99.0" stroke="#3bb925" />
+            <Line endX="-6.0" endY="35.0" fill="#3bb925" layoutX="649.0" layoutY="580.0" startX="-6.0" startY="-99.0" stroke="#3bb925" />
+            <Line endX="-5.5" endY="36.5" fill="#3bb925" layoutX="203.0" layoutY="580.0" startX="-6.0000152587890625" startY="-82.0" stroke="#3bb925" />
+            <Line endX="739.5" fill="#3bb925" layoutX="298.0" layoutY="616.0" startX="-100.0" stroke="#3bb925" />
+            <Line endX="-6.0" endY="177.0" fill="#3bb925" layoutX="1043.0" layoutY="579.0" startX="-6.0" startY="-81.0" stroke="#3bb925" />
+            <Line endX="100.0" fill="#3bb925" layoutX="937.0" layoutY="756.0" startX="-154.5" startY="-0.5" stroke="#3bb925" />
+            <Line endX="-7.5" endY="178.5" fill="#3bb925" layoutX="915.0" layoutY="579.0" startX="-6.0" startY="-99.0" stroke="#3bb925" />
+            <Line endX="-6.0" endY="176.0" fill="#3bb925" layoutX="788.0" layoutY="579.0" startX="-6.0" startY="-99.0" stroke="#3bb925" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="488.0" prefHeight="21.0" prefWidth="266.0" text="DESCRIPTION" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="502.0" layoutY="488.0" prefHeight="21.0" prefWidth="140.0" text="UNIT PRICE" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="642.0" layoutY="488.0" prefHeight="21.0" prefWidth="140.0" text="START DATE" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="787.0" layoutY="488.0" prefHeight="21.0" prefWidth="120.0" text="END DATE" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="910.0" layoutY="488.0" prefHeight="21.0" prefWidth="120.0" text="AMOUNT (DT)" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="787.0" layoutY="635.0" prefHeight="21.0" prefWidth="120.0" text="SUBTOTAL" textFill="#a6a6a6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="787.0" layoutY="657.0" prefHeight="21.0" prefWidth="120.0" text="DISCOUNT" textFill="#a6a6a6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="787.0" layoutY="679.0" prefHeight="21.0" prefWidth="120.0" text="TVA 19%" textFill="#a6a6a6">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="787.0" layoutY="722.0" prefHeight="34.0" prefWidth="120.0" text="TOTAL" textFill="#464646">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="290.0" endY="42.0" layoutX="745.0" layoutY="678.0" startX="161.7928466796875" startY="42.0" stroke="#3bb925" />
+            <Label fx:id="date_aj" layoutX="780.0" layoutY="208.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="id_reservation" layoutX="780.0" layoutY="229.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="c_b" layoutX="780.0" layoutY="250.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="c_m" layoutX="780.0" layoutY="272.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="km_c" layoutX="780.0" layoutY="293.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="f_n_u" layoutX="780.0" layoutY="374.0" prefHeight="21.0" prefWidth="212.0" />
+            <Label fx:id="l_n_u" layoutX="787.0" layoutY="395.0" prefHeight="21.0" prefWidth="212.0" />
+            <ImageView fx:id="imgr" fitHeight="179.0" fitWidth="256.0" layoutX="149.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="PDF" layoutX="1259.0" layoutY="7.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="31.0" styleClass="transparent" stylesheets="@../style/style.css" />
+            <Label fx:id="uprice" alignment="CENTER" contentDisplay="CENTER" layoutX="513.0" layoutY="549.0" prefHeight="21.0" prefWidth="120.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="sdate" alignment="CENTER" contentDisplay="CENTER" layoutX="648.0" layoutY="549.0" prefHeight="21.0" prefWidth="129.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="sdate1" alignment="CENTER" contentDisplay="CENTER" layoutX="781.0" layoutY="549.0" prefHeight="21.0" prefWidth="129.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="amount" alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" layoutY="549.0" prefHeight="21.0" prefWidth="120.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="discount" layoutX="911.0" layoutY="658.0" prefHeight="21.0" prefWidth="120.0" text="           0.00%" textFill="#3bb925">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="tva" alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" layoutY="690.0" prefHeight="21.0" prefWidth="120.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="total" alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" layoutY="722.0" prefHeight="34.0" prefWidth="128.0" textAlignment="CENTER" textFill="#f20707">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="PRINT" layoutX="1139.0" layoutY="725.0" mnemonicParsing="false" onAction="#PRINT" prefHeight="34.0" prefWidth="96.0" stylesheets="@../style/Style_1.css" text="PDF" />
+            <Button layoutX="1131.0" layoutY="673.0" mnemonicParsing="false" onAction="#imgg" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #3bb925; -fx-background-radius: 50;" stylesheets="@../style/style.css" text="OK" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="add-btn" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="526.0" prefHeight="34.0" prefWidth="266.0" text="Well trusted provider" textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="549.0" prefHeight="34.0" prefWidth="266.0" text="Car have to be back " textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="570.0" prefHeight="34.0" prefWidth="266.0" text="with the same condition " textFill="#6e6e6e">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="423.0" layoutX="658.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/LOGO1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
