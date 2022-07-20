@@ -8,19 +8,19 @@
 
 <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RateIController">
    <children>
-      <Rating fx:id="rateS" layoutX="175.0" layoutY="334.0" prefHeight="32.0" prefWidth="296.0" />
+      <Rating fx:id="rateS" layoutX="244.0" layoutY="384.0" prefHeight="32.0" prefWidth="284.0" />
       
-      <Label layoutX="124.0" layoutY="136.0" prefHeight="87.0" prefWidth="766.0" text="Please share your thoughts " textFill="#3bb925">
+      <Label layoutX="225.0" layoutY="134.0" prefHeight="112.0" prefWidth="886.0" text="Please share your thoughts " textFill="#3bb925">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="124.0" layoutY="231.0" prefHeight="53.0" prefWidth="359.0" text="and experience" textFill="#3bb925">
+      <Label layoutX="225.0" layoutY="223.0" prefHeight="123.0" prefWidth="609.0" text="and experience" textFill="#3bb925">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnSubmit" layoutX="483.0" layoutY="457.0" onAction="#SubmitRate" style="-fx-background-color: #3BB925; -fx-background-radius: 10px;" text="Submit" textFill="WHITE">
+      <JFXButton fx:id="btnSubmit" layoutX="572.0" layoutY="497.0" onAction="#SubmitRate" style="-fx-background-color: #3BB925; -fx-background-radius: 10px;" text="Submit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

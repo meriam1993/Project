@@ -17,7 +17,7 @@ public class DataSource {
 
     private String url = "jdbc:mysql://localhost:3306/java_project";
     private String login = "root";
-    private String pwd = "";
+    private String pwd = "root";
 
     private Connection con;
     
