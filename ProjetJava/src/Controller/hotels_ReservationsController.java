@@ -268,11 +268,16 @@ public class hotels_ReservationsController implements Initializable {
         
         @FXML
         private void DeleteRes(ActionEvent event) throws IOException {
-        Integer id =  Integer.parseInt(id_to_delete.getText());
-         hotel_reservation_Service hs=new  hotel_reservation_Service();
-          hs.delete(id);
+            
+        
+        
+        reservation_hotel hotelselected = table1.getSelectionModel().getSelectedItem();
+          Integer hotel_selected=hotelselected.getId_reshotel();
+          HotelService ps= new HotelService();
+           hotel_reservation_Service hs=new  hotel_reservation_Service();
+          hs.delete(hotel_selected);
           UpdateTable1();
-        Reset1();
+          Reset1();
         
 
         

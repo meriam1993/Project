@@ -30,7 +30,7 @@ public class CarService implements IService<Car> {
 
     @Override
     public void insert(Car t) {
-        String requete = "insert into Car (Car_id,Car_brand,Car_model,imgSrc,kilometrage,price,color) values ('"+t.getCar_id()+"','"+t.getCar_brand()+"','"+t.getCar_model()+"','"+t.getImgSrc()+"','"+t.getKilometrage()+"','"+t.getPrice()+"',"+t.getColor()+")";
+        String requete = "insert into Car (Car_id,Car_brand,Car_model,imgSrc,kilometrage,price,color) values ('"+t.getCar_id()+"','"+t.getCar_brand()+"','"+t.getCar_model()+"','"+t.getImgSrc()+"','"+t.getKilometrage()+"','"+t.getPrice()+"')";
         try {
             ste = cnx.createStatement();
             ste.executeUpdate(requete);
@@ -40,17 +40,16 @@ public class CarService implements IService<Car> {
     }
 
     public void insertPst(Car t) {
-        String requete = "insert into Car (Car_id,Car_brand,Car_model,imgSrc,kilometrage,price,color) values  (?,?,?,?,?,?,?)";
+        String requete = "insert into Car (Car_brand,Car_model,imgSrc,kilometrage,price) values  (?,?,?,?,?)";
 
         try {
             pst = cnx.prepareStatement(requete);
-            pst.setInt(1, t.getCar_id());
-            pst.setString(2, t.getCar_brand());
-            pst.setString(3, t.getCar_model());
-            pst.setString(4, t.getImgSrc());
-            pst.setInt(5, t.getKilometrage());
-            pst.setDouble(6, t.getPrice());
-            pst.setString(7, t.getColor());
+            pst.setString(1, t.getCar_brand());
+            pst.setString(2, t.getCar_model());
+            pst.setString(3, t.getImgSrc());
+            pst.setInt(4, t.getKilometrage());
+            pst.setDouble(5, t.getPrice());
+            
             
             pst.executeUpdate();
 
@@ -74,7 +73,7 @@ public class CarService implements IService<Car> {
     @Override
     public void update(Car t) {
 
-        String req=" update Car set Car_id = ? , Car_brand =? , Car_model= ? , imgSrc= ? , kilometrage= ? ,price= ? , color= ? where Car_id = ?";
+        String req=" update Car set Car_id = ? , Car_brand =? , Car_model= ? , imgSrc= ? , kilometrage= ? ,price= ?  where Car_id = ?";
         try {
             pst=cnx.prepareStatement(req);
             pst.setInt(1,t.getCar_id());
@@ -84,7 +83,7 @@ public class CarService implements IService<Car> {
              pst.setInt(5, t.getKilometrage());
              
             pst.setDouble(6,t.getPrice());
-            pst.setString(7, t.getColor());
+            
             pst.executeUpdate();
             
         } catch (SQLException ex) {
@@ -101,7 +100,7 @@ public class CarService implements IService<Car> {
             ste=cnx.createStatement();
            rs=ste.executeQuery(requete);
            while(rs.next()){
-               Car_list.add(new Car(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4), rs.getInt(5),rs.getDouble(6),rs.getString(7)));
+               Car_list.add(new Car(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4), rs.getInt(5),rs.getDouble(6)));
            }
         } catch (SQLException ex) {
             Logger.getLogger(CarService.class.getName()).log(Level.SEVERE, null, ex);
@@ -120,7 +119,7 @@ public class CarService implements IService<Car> {
             pst.setInt(1,id);
             rs=pst.executeQuery();
             while(rs.next()){
-            Cars = new Car(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4), rs.getInt(5),rs.getDouble(6),rs.getString(7));
+            Cars = new Car(rs.getInt(1), rs.getString(2),rs.getString(3),rs.getString(4), rs.getInt(5),rs.getDouble(6));
             }
             
         } catch (SQLException ex) {
@@ -154,5 +153,6 @@ public class CarService implements IService<Car> {
         
         
     }
+       
     }
     

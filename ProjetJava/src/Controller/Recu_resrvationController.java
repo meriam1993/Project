@@ -43,10 +43,12 @@ import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.BoundingBox;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Label;
 import javafx.scene.image.WritableImage;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
@@ -75,8 +77,6 @@ public class Recu_resrvationController implements Initializable {
     private Label l_n_u;
     @FXML
     private ImageView imgr;
-    @FXML
-    private Button PDF;
     @FXML
     private Label uprice;
     @FXML
@@ -261,5 +261,7 @@ public class Recu_resrvationController implements Initializable {
         Image();
     }
 
-    }
+   
+
+}
     

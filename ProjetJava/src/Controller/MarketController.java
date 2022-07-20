@@ -71,7 +71,7 @@ public class MarketController implements Initializable {
 
    
 
-        CarService ps = new CarService();
+       CarService ps = new CarService();
        ArrayList<Car>  cars = ps.getAll();
        UserService us=new UserService();
        user user = us.getById(3);
@@ -150,7 +150,7 @@ public class MarketController implements Initializable {
         try {
             for (int i = 0; i < cars.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                fxmlLoader.setLocation(getClass().getResource("/views/item.fxml"));
+                fxmlLoader.setLocation(getClass().getResource("../views/Item.fxml"));
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 ItemController itemController = fxmlLoader.getController();
@@ -187,14 +187,11 @@ public class MarketController implements Initializable {
 
     @FXML
     private void add_reservation(ActionEvent event) throws IOException {
-     
- 
-      
-     
+    
        
         long date1 = S_date.getValue().getDayOfYear();
-long date2 = E_date.getValue().getDayOfYear();
-  long date_sys = LocalDateTime.now().getDayOfYear();
+        long date2 = E_date.getValue().getDayOfYear();
+        long date_sys = LocalDateTime.now().getDayOfYear();
        
    
      

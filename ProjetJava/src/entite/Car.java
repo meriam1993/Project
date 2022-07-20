@@ -22,6 +22,14 @@ public class Car {
         return Car_id;
     }
 
+    public Car(String Car_brand, String Car_model, String imgSrc, int kilometrage, double price) {
+        this.Car_brand = Car_brand;
+        this.Car_model = Car_model;
+        this.imgSrc = imgSrc;
+        this.kilometrage = kilometrage;
+        this.price = price;
+    }
+
     public void setCar_id(int Car_id) {
         this.Car_id = Car_id;
     }
@@ -80,14 +88,14 @@ public class Car {
         return "Car{" + "Car_id=" + Car_id + ", Car_brand=" + Car_brand + ", Car_model=" + Car_model + ", imgSrc=" + imgSrc + ", kilometrage=" + kilometrage + ", price=" + price + ", color=" + color + '}';
     }
 
-    public Car(int Car_id, String Car_brand, String Car_model, String imgSrc, int kilometrage, double price, String color) {
+    public Car(int Car_id, String Car_brand, String Car_model, String imgSrc, int kilometrage, double price) {
         this.Car_id = Car_id;
         this.Car_brand = Car_brand;
         this.Car_model = Car_model;
         this.imgSrc = imgSrc;
         this.kilometrage = kilometrage;
         this.price = price;
-        this.color = color;
+       
        
     }
 

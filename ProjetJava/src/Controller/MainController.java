@@ -50,7 +50,6 @@ public class MainController implements Initializable {
     private Label labelInit;
         @FXML
      public void handleButton1Action(ActionEvent event) throws IOException{
-   
      FxmlLoader object=new FxmlLoader();
      Pane view = object.getPage("../views/FlightsAdmin.fxml");
      mainPane.setCenter(view);

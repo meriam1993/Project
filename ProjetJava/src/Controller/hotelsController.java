@@ -180,15 +180,12 @@ public class hotelsController implements Initializable {
     
         @FXML
         private void Delete(ActionEvent event) {
-       /* hotel hotelselected = table.getSelectionModel().getSelectedItem();
+          hotel hotelselected = table.getSelectionModel().getSelectedItem();
           hotel_selected=hotelselected.getHotel_id();
           HotelService ps= new HotelService();
-          ps.getById(hotel_selected);*/
-          
-        Integer id =  Integer.parseInt(id_to_delete.getText());
-         HotelService hs=new HotelService();
-          hs.delete(id);
+          ps.delete(hotel_selected);
           UpdateTable();
+          
         
      
         

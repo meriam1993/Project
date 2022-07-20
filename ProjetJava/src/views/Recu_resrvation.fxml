@@ -107,7 +107,6 @@
             <Label fx:id="f_n_u" layoutX="780.0" layoutY="374.0" prefHeight="21.0" prefWidth="212.0" />
             <Label fx:id="l_n_u" layoutX="787.0" layoutY="395.0" prefHeight="21.0" prefWidth="212.0" />
             <ImageView fx:id="imgr" fitHeight="179.0" fitWidth="256.0" layoutX="149.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="PDF" layoutX="1259.0" layoutY="7.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="31.0" styleClass="transparent" stylesheets="@../style/style.css" />
             <Label fx:id="uprice" alignment="CENTER" contentDisplay="CENTER" layoutX="513.0" layoutY="549.0" prefHeight="21.0" prefWidth="120.0" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />

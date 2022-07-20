@@ -194,7 +194,20 @@ public class ReservationCarService implements IService<Car_reservation> {
             Logger.getLogger(ReservationCarService.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+   public ArrayList<Car_reservation> getAllById(int id) {
+         ArrayList<Car_reservation> CarR=new ArrayList<>();
+        String requete="select * from Car_reservation where user_id="+id;
+        try {
+            ste=cnx.createStatement();
+           rs=ste.executeQuery(requete);
+           while(rs.next()){
+            CarR.add(new Car_reservation(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDate(4),rs.getDate(5),rs.getDouble(6)));
+           }
+        } catch (SQLException ex) {
+            Logger.getLogger(CarService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return CarR;
+    }
 
         
     }

@@ -131,7 +131,7 @@ public void Reset(){
         }
     @FXML
     private void AddVol(ActionEvent event) {
-        Car c = new Car(Integer.parseInt(txt_car_id.getText()),txt_car_brand.getText(),txt_car_model.getText(),txt_car_image.getText(),Integer.parseInt(txt_km.getText()),Double.parseDouble(txt_price.getText()),txt_color.getText());
+        Car c = new Car(txt_car_brand.getText(),txt_car_model.getText(),txt_car_image.getText(),Integer.parseInt(txt_km.getText()),Double.parseDouble(txt_price.getText()));
         CarService ps= new CarService();
         ps.insertPst(c);
         

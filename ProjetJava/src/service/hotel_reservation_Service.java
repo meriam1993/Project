@@ -5,6 +5,7 @@
  */
 package service;
 
+import entite.Car_reservation;
 import entite.hotel;
 import entite.reservation_hotel;
 import entite.user;
@@ -172,6 +173,32 @@ public class hotel_reservation_Service implements IService<reservation_hotel>{
     @Override
     public void delete(reservation_hotel t, int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ArrayList<reservation_hotel> getAllById(int id) {
+        
+        ArrayList<reservation_hotel> Resh=new ArrayList<>();
+        
+        try {
+            
+            String req="select * from hotel_reservation where user_id="+id ;
+
+            ste=cnx.createStatement();
+            rs=ste.executeQuery(req);
+            while(rs.next()){
+                int userID=rs.getInt(2);
+                int hotel_id=rs.getInt(3);
+                UserService us =new UserService();                
+                HotelService hs =new HotelService();
+              Resh.add(new reservation_hotel(rs.getInt(1),us.getById(userID),hs.getById(hotel_id),rs.getString(4),rs.getString(5),rs.getDate(6),rs.getDate(7),rs.getInt(8),rs.getDouble(9)));
+                System.out.println(us.getById(userID));
+           // Resh.add(new reservation_hotel(rs.getInt(1),us.getById(userID),hs.getById(hotel_id),rs.getString(4),rs.getString(5),rs.getDate(6),rs.getDate(7),rs.getInt(8), (float) rs.getDouble(9)));
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(hotel_reservation_Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return Resh;
     }
 
     

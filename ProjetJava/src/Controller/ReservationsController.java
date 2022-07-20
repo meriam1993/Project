@@ -6,8 +6,10 @@
 package Controller;
 
 
+import entite.Car_reservation;
 import entite.Vol;
 import entite.Vol_reservation;
+import entite.reservation_hotel;
 import entite.user;
 import java.net.URL;
 import java.sql.Date;
@@ -23,9 +25,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import service.ReservationCarService;
 import service.ReservationVolService;
 import service.UserService;
 import service.VolService;
+import service.hotel_reservation_Service;
 
 /**
  * FXML Controller class
@@ -49,6 +53,29 @@ public class ReservationsController implements Initializable {
     @FXML
     private Button btn_DELETE;
     private int Vol_idselected;
+    private int Hotel_idselected;
+
+    private int Car_idselected;
+    @FXML
+    private TableView<Car_reservation> table1;
+    @FXML
+    private TableColumn<Car_reservation, Date> start_date;
+    @FXML
+    private TableColumn<Car_reservation, Date> end_date;
+    @FXML
+    private TableColumn<Car_reservation, Double> priceC;
+    @FXML
+    private Button btn_DELETE1;
+    @FXML
+    private TableView<reservation_hotel> table11;
+    @FXML
+    private TableColumn<reservation_hotel, Date> start_date1;
+    @FXML
+    private TableColumn<reservation_hotel, Date> end_date1;
+    @FXML
+    private TableColumn<reservation_hotel, Double> priceC1;
+    @FXML
+    private Button btn_DELETE11;
 
     /**
      * Initializes the controller class.
@@ -67,6 +94,27 @@ public class ReservationsController implements Initializable {
         departure_date.setCellValueFactory(new PropertyValueFactory<>("departure_date"));
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         table.setItems(obs);
+        
+        
+        ReservationCarService ps2 = new ReservationCarService();
+        ArrayList<Car_reservation> carR = ps2.getAllById(id);
+        ObservableList<Car_reservation> obs1=FXCollections.observableArrayList(carR);
+        start_date.setCellValueFactory(new PropertyValueFactory<>("Start_date"));
+        end_date.setCellValueFactory(new PropertyValueFactory<>("End_date"));
+        priceC.setCellValueFactory(new PropertyValueFactory<>("price")); 
+        table1.setItems(obs1);
+        
+        
+        hotel_reservation_Service ps3 = new hotel_reservation_Service();
+        ArrayList<reservation_hotel> HotelR = ps3.getAllById(id);
+        ObservableList<reservation_hotel> obs3=FXCollections.observableArrayList(HotelR);
+        start_date1.setCellValueFactory(new PropertyValueFactory<>("checkin"));
+        end_date1.setCellValueFactory(new PropertyValueFactory<>("checkout"));
+        priceC1.setCellValueFactory(new PropertyValueFactory<>("prix")); 
+        table11.setItems(obs3);
+               
+        
+        
     }    
 
     @FXML
@@ -94,6 +142,55 @@ public class ReservationsController implements Initializable {
         departure_date.setCellValueFactory(new PropertyValueFactory<>("departure_date"));
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         table.setItems(obs);}
+
+    @FXML
+    private void DeleteCar(ActionEvent event) {
+          Car_reservation volselected = table1.getSelectionModel().getSelectedItem();
+         Car_idselected = volselected.getReservation_Car_id();
+        ReservationCarService ps = new ReservationCarService();
+        ps.deleteByID(Car_idselected);
+
+      UpdateTable1();
+    }
+    private void UpdateTable1 (){
+    
+    ReservationVolService ps = new ReservationVolService();
+     String n=LoginController.getInstance().email();
+     UserService us = new UserService();
+     user u=us.getbyEmail(n);
+     int id=u.getUser_id();
+     ReservationCarService ps2 = new ReservationCarService();
+        ArrayList<Car_reservation> carR = ps2.getAllById(id);
+        ObservableList<Car_reservation> obs1=FXCollections.observableArrayList(carR);
+        start_date.setCellValueFactory(new PropertyValueFactory<>("Start_date"));
+        end_date.setCellValueFactory(new PropertyValueFactory<>("End_date"));
+        priceC.setCellValueFactory(new PropertyValueFactory<>("price")); 
+        table1.setItems(obs1);
+  }
+
+    @FXML
+    private void DeleteHotel(ActionEvent event) {
+        reservation_hotel Hotelselected = table11.getSelectionModel().getSelectedItem();
+        Hotel_idselected = Hotelselected.getId_reshotel();
+        hotel_reservation_Service ps3 = new hotel_reservation_Service();
+        ps3.delete(Hotel_idselected);
+        UpdateTable2();
+    }
+        private void UpdateTable2 (){
+    
+    ReservationVolService ps = new ReservationVolService();
+     String n=LoginController.getInstance().email();
+     UserService us = new UserService();
+     user u=us.getbyEmail(n);
+     int id=u.getUser_id();
+           hotel_reservation_Service ps3 = new hotel_reservation_Service();
+        ArrayList<reservation_hotel> HotelR = ps3.getAllById(id);
+        ObservableList<reservation_hotel> obs3=FXCollections.observableArrayList(HotelR);
+        start_date1.setCellValueFactory(new PropertyValueFactory<>("checkin"));
+        end_date1.setCellValueFactory(new PropertyValueFactory<>("checkout"));
+        priceC1.setCellValueFactory(new PropertyValueFactory<>("prix")); 
+        table11.setItems(obs3);
+  }
     
    
 
